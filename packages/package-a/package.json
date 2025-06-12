@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "test": "vitest run",
-    "test:watch": "vitest",
+    "test": "node ../../node_modules/vitest/vitest.mjs run --config vitest.config.ts",
+    "test:watch": "node ../../node_modules/vitest/vitest.mjs --config vitest.config.ts",
     "build": "tsc",
     "lint": "eslint ."
   },
