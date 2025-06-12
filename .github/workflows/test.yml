@@ -31,6 +31,7 @@ jobs:
               status: 'in_progress',
               started_at: new Date().toISOString(),
             });
+            core.setOutput('check_id', check.data.id);
             return check.data.id;
 
   test-package-a:
