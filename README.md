@@ -8,19 +8,16 @@ This repository demonstrates a concept for orchestrating test execution in large
 
 ## Architecture
 
-The repository uses:
-- Turborepo for monorepo management
-- Jest for test execution
-- GitHub Actions for CI/CD
-- GitHub Checks API for progress reporting
+The architecture is simple and to the point
 
-## How it Works
+![Architecture Diagram](./assets/basic-architecture.webp)
 
-1. When a PR is opened or updated, a single GitHub Check is created
-2. Tests are split across multiple runners
-3. Each test runner reports its progress back to the main check
-4. The check is updated in real-time with test progress
-5. All results are aggregated into a single check line in the PR
+The diagram above illustrates how the test orchestration works:
+
+- A single GitHub Check is created for the PR
+- Test suites are distributed across multiple runners
+- Each runner reports progress back to the main check in real time
+- Results are aggregated into a single check line
 
 ## Getting Started
 
@@ -37,6 +34,12 @@ The repository uses:
    yarn test
    ```
 
+4. Make a commit, and see the workflow in action
+
 ## Contributing
 
 Feel free to open issues and pull requests to improve this concept.
+
+## License
+
+[MIT](./LICENSE) license
