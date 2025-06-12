@@ -14,6 +14,7 @@ permissions:
 
 jobs:
   create-check:
+    name: ''
     runs-on: ubuntu-latest
     outputs:
       check_id: ${{ steps.create-check.outputs.check_id }}
@@ -35,6 +36,7 @@ jobs:
             return check.data.id;
 
   test-package-a:
+    name: ''
     needs: create-check
     runs-on: ubuntu-latest
     steps:
@@ -82,6 +84,7 @@ jobs:
             });
 
   finalize-check:
+    name: ''
     needs: [create-check, test-package-a]
     runs-on: ubuntu-latest
     steps:
