@@ -7,6 +7,12 @@ on:
     branches:
       - main
 
+# Add permissions block
+permissions:
+  checks: write
+  contents: read
+  pull-requests: write
+
 jobs:
   create-check:
     runs-on: ubuntu-latest
