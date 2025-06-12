@@ -1,18 +1,15 @@
-import { defineConfig } from 'vitest/config'
-import tsconfigPaths from 'vite-tsconfig-paths'
+import { defineConfig, mergeConfig } from 'vitest/config'
+import baseConfig from '../../vitest.config'
 
-export default defineConfig({
+export default mergeConfig(
   // @ts-expect-error - doesn't have correct types
-  plugins: [tsconfigPaths()],
-  test: {
-    globals: true,
-    environment: 'node',
-    testTimeout: 15000,
-    hookTimeout: 15000,
-    coverage: {
-      provider: 'v8',
-      reporter: ['text', 'json', 'html'],
-      reportsDirectory: './coverage',
+  baseConfig,
+  defineConfig({
+    test: {
+      include: ['__tests__/**/*.test.ts'],
+      coverage: {
+        reportsDirectory: './coverage',
+      },
     },
-  },
-})
+  }),
+)
