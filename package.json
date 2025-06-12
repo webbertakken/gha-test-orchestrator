@@ -1,5 +1,6 @@
 {
   "name": "gha-test-orchestrator",
+  "description": "Example of test orchestration on GitHub Actions",
   "private": true,
   "workspaces": [
     "packages/*"
