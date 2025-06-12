@@ -1,0 +1,8 @@
+# Ignoring generated files
+dist/
+coverage/
+node_modules/
+.yarn/
+.next/
+.idea/
+.turbo/
