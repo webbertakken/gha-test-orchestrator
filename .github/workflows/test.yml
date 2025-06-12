@@ -82,7 +82,7 @@ jobs:
             });
 
   finalize-check:
-    needs: [test-package-a]
+    needs: [create-check, test-package-a]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
