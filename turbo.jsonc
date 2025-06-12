@@ -9,7 +9,8 @@
     "test": {
       "dependsOn": ["^test"],
       "outputs": ["coverage/**"],
-      "inputs": ["src/**/*.tsx", "src/**/*.ts", "test/**/*.ts", "test/**/*.tsx"]
+      "inputs": ["src/**/*.tsx", "src/**/*.ts", "test/**/*.ts", "test/**/*.tsx"],
+      "cache": false // This would normally be set to true, but we're disabling it for demo purposes.
     },
     "lint": {
       "outputs": []

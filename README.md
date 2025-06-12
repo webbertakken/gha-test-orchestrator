@@ -26,22 +26,17 @@ The repository uses:
 
 1. Clone the repository
 2. Install dependencies:
+
    ```bash
    yarn install
    ```
+
 3. Run tests:
+
    ```bash
    yarn test
    ```
 
-## Adding New Packages
-
-To add a new package:
-
-1. Create a new directory in `packages/`
-2. Copy the structure from an existing package
-3. Update the GitHub Actions workflow to include the new package
-
 ## Contributing
 
-Feel free to open issues and pull requests to improve this concept. 
+Feel free to open issues and pull requests to improve this concept.

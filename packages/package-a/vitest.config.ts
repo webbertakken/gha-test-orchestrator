@@ -2,6 +2,7 @@ import { defineConfig } from 'vitest/config'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig({
+  // @ts-expect-error - doesn't have correct types
   plugins: [tsconfigPaths()],
   test: {
     globals: true,
