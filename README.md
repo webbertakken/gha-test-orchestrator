@@ -1,6 +1,7 @@
 # GitHub Actions Test Orchestrator
 
-This repository demonstrates a concept for orchestrating test execution in large monorepos using GitHub Actions. It shows how to:
+This repository demonstrates a concept for orchestrating test execution in large monorepos using
+GitHub Actions. It shows how to:
 
 1. Split test execution across multiple runners
 2. Report progress back to a single GitHub Check

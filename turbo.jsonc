@@ -9,10 +9,18 @@
     "test": {
       "dependsOn": ["^test"],
       "outputs": ["coverage/**"],
-      "inputs": ["src/**/*.tsx", "src/**/*.ts", "test/**/*.ts", "test/**/*.tsx"],
+      "inputs": [
+        "src/**/*.tsx",
+        "src/**/*.ts",
+        "test/**/*.ts",
+        "test/**/*.tsx",
+        "__tests__/**/*.ts",
+        "__tests__/**/*.tsx"
+      ],
       "cache": false // This would normally be set to true, but we're disabling it for demo purposes.
     },
-    "lint": {
+    "typecheck": {
+      "dependsOn": ["^build"],
       "outputs": []
     }
   }
